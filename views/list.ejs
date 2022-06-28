@@ -1,0 +1,19 @@
+<%- include("header") %>
+<body>
+    <div class="box" id="heading">
+        <h1><%= kindOfDay %></h1>
+    </div>
+    <div class="box">
+        <% for (let i = 0; i < itemList.length; i++) {%>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= itemList[i] %></p>
+            </div>
+        <%}%>
+        <form action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit">+</button>
+        </form>
+    </div>
+</body>
+<%- include("footer") %>
